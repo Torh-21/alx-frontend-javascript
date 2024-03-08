@@ -5,13 +5,13 @@ export default class HolbertonClass {
   }
 
   [Symbol.toPrimitive](dataType) {
-     if (dataType === 'string') {
-       return `${this.location}`;
-     }
-     if (dataType === 'number') {
-       return `${this.size}`;
-     }
-     return `${this.location}`;
+    if (dataType === 'string') {
+      return `${this.location}`;
+    }
+    if (dataType === 'number') {
+      return `${this.size}`;
+    }
+    return `${this.location}`;
   }
 
   get size() {
