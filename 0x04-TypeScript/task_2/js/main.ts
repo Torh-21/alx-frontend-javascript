@@ -42,3 +42,17 @@ function createEmployee(salary: string | number) {
   if (typeof salary === 'number' && salary < 500) return new Teacher;
     return new Director;
 }
+
+function isDirector(employee):void employee is Director {}
+
+function executeWork(employee): void {
+  if (employee instanceof Director) return employee.workDirectorTasks();
+    return Teacher.workTeacherTasks();
+}
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects):string {
+  if (todayClass === 'Math') return 'Teaching Math';
+    return 'Teaching History';
+}
